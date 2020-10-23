@@ -44,7 +44,8 @@ weather?q={}&units=metric&appid=67d807f8b862fab8c0b6d2a90ac12c1f"
     if parsed.get('weather'):
         weather ={'description':parsed['weather'][0]['description'],
                     'temperature':parsed['main']['temp'],
-                    'city':parsed['name']
+                    'city':parsed['name'],
+                    'country': parsed['sys']['country']
                  }
     return weather
 if __name__ == "__main__":
